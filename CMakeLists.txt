@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -static")
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp src/Display.cpp src/Display.h src/ShakerDisplay.cpp src/ShakerDisplay.h src/utility.cpp src/utility.h src/BubbleDisplay.cpp src/BubbleDisplay.h src/InsertionDisplay.cpp src/InsertionDisplay.h)
+set(SOURCE_FILES main.cpp src/Display.cpp src/Display.h src/ShakerDisplay.cpp src/ShakerDisplay.h src/utility.cpp src/utility.h src/BubbleDisplay.cpp src/BubbleDisplay.h src/InsertionDisplay.cpp src/InsertionDisplay.h src/SelectionDisplay.cpp src/SelectionDisplay.h src/test.cpp)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})

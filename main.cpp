@@ -5,6 +5,7 @@
 #include "src/BubbleDisplay.h"
 #include "src/ShakerDisplay.h"
 #include "src/InsertionDisplay.h"
+#include "src/SelectionDisplay.h"
 #include "src/utility.h"
 
 using std::string;
@@ -16,9 +17,10 @@ int main() {
     auto * shakerDisplayPtr = new ShakerDisplay;
     auto * insertionDisplayPtr = new InsertionDisplay;
     auto * bubbleDisplayPtr = new BubbleDisplay;
-    vector <Display*> displayVector = {bubbleDisplayPtr, insertionDisplayPtr, shakerDisplayPtr};
+    auto * selectionDisplayPtr = new SelectionDisplay;
+    vector <Display*> displayVector = {selectionDisplayPtr, bubbleDisplayPtr, insertionDisplayPtr, shakerDisplayPtr};
     for (auto i = 0; i < displayVector.size(); i++){
-        (*displayVector[i]).setArray(Display::getMixedArray());
+        (*displayVector[i]).setArray(Display::getMixedArray(56));
         (*displayVector[i]).startLoop();
     }
 }
