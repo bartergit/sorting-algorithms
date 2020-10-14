@@ -1,11 +1,10 @@
 #include "BubbleDisplay.h"
-#include "Display.h"
 
 BubbleDisplay::BubbleDisplay(int fps) : Display(fps) {
     window.setTitle("Bubble Sort");
 }
 
-void BubbleDisplay::sortAndDraw(vector<int> array){
+vector<int> BubbleDisplay::sortAndDraw(vector<int> array){
     bool isSwapped = true;
     for (unsigned int i = 0; i < array.size() - 1 && isSwapped; i++) {
         isSwapped = false;
@@ -17,7 +16,8 @@ void BubbleDisplay::sortAndDraw(vector<int> array){
             }
         }
     }
-    this->drawArray(array);
+    drawArray(array);
+    return array;
 }
 //pure sort
 vector<int> BubbleDisplay::insertionSort(vector<int> array){

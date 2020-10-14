@@ -20,7 +20,7 @@ public:
     Display(int fps = 10);
     void startLoop();
     void setArray(std::vector<int> array);
-    virtual void sortAndDraw(std::vector<int> arrayToDraw) = 0;
+    virtual std::vector<int> sortAndDraw(std::vector<int> arrayToDraw) = 0;
     void drawArray(std::vector<int> array, int activePareInd = -2);
     void drawRect(sf::RenderWindow &window, int x, int y, int width, int height, sf::Color color);
     void drawText(sf::RenderWindow &window, sf::Font &font, std::string textValue, int size, int x, int y);

@@ -1,12 +1,12 @@
 #ifndef SORTING_ALGORITHMS_SHAKERDISPLAY_H
 #define SORTING_ALGORITHMS_SHAKERDISPLAY_H
 
-#include "Display.h"
+#include "../_Display/Display.h"
 
 class ShakerDisplay : public Display {
 public:
     ShakerDisplay(int fps = 10);
-    void sortAndDraw(std::vector<int> array);
+    std::vector<int> sortAndDraw(std::vector<int> array);
     static std::vector<int> shakerSort(std::vector<int> array);
 };
 

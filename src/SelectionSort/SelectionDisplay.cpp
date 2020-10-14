@@ -1,17 +1,12 @@
-//
-// Created by Lenovo on 21.06.2020.
-//
-
 #include "SelectionDisplay.h"
-#include "Display.h"
 #include <iostream>
-#include "utility.h"
+#include "../utility.h"
 
 SelectionDisplay::SelectionDisplay(int fps) : Display(fps) {
     window.setTitle("Selection sort");
 }
 
-void SelectionDisplay::sortAndDraw(vector<int> array){
+vector<int> SelectionDisplay::sortAndDraw(vector<int> array){
     int * start = &array[0];
     int * end = &array[array.size() - 1];
     while (end - start >= 1) {
@@ -24,9 +19,10 @@ void SelectionDisplay::sortAndDraw(vector<int> array){
                 max = ptr;
         }
         std::swap(*start++, *min);
-        this->drawArray(array);
+        drawArray(array);
     }
-    this->drawArray(array);
+    drawArray(array);
+    return array;
 }
 //pure sort
 vector<int> SelectionDisplay::selectionSort(vector<int> array){

@@ -6,7 +6,7 @@ ShakerDisplay::ShakerDisplay(int fps) : Display(fps) {
     window.setTitle("Shaker Sort");
 }
 
-void ShakerDisplay::sortAndDraw(vector<int> array) {
+vector<int> ShakerDisplay::sortAndDraw(vector<int> array) {
     int *start = &array[0];
     int *end = &array[array.size() - 1];
     int *current = start;
@@ -32,7 +32,8 @@ void ShakerDisplay::sortAndDraw(vector<int> array) {
         }
         start++;
     }
-    this->drawArray(array);
+    drawArray(array);
+    return array;
 }
 
 //pure sort
